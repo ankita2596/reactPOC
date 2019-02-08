@@ -351,7 +351,7 @@ module.exports = {
               importLoaders: 1,
               sourceMap: shouldUseSourceMap,
               modules: true,
-              localIdentName: '[name]_[local]_[hash:base64:5]'
+              localIdentName: '[name]__[local]__[hash:base64:5]'
             }),
             // Don't consider CSS imports dead code even if the
             // containing package claims to have no side effects.
