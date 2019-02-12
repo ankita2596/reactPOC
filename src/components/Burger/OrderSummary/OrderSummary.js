@@ -1,28 +1,34 @@
-import React from 'react';
+import React, {Component} from 'react';
 
-import Aux from '../../../hoc/Aux';
 import Button from '../../UI/Button/Button';
 
-const orderSummary = (props) => {
-    const ingredientsSummary = Object.keys(props.ingredients)
+class OrderSummary extends Component {
+    // This could be functional component. 
+    componentWillUpdate() {
+        console.log('[OrderSummary] willUpdate');
+    }
+    render() {
+        const ingredientsSummary = Object.keys(this.props.ingredients)
         .map(igkey => {
             return  <li key={igkey}>
-                        <span style={{textTransform: 'capitalize'}}>{igkey}</span> : {props.ingredients[igkey]}
+                        <span style={{textTransform: 'capitalize'}}>{igkey}</span> : {this.props.ingredients[igkey]}
                     </li>
         });
-    return (
-        <Aux>
-            <h3>Your Order</h3>
-            <p>A delicious burger with the following ingredients:</p> 
-            <ul>
-                {ingredientsSummary}
-            </ul>
-            <p>Continue to checkout?</p>
-            <p><strong>Total price : {props.price.toFixed(2)}</strong></p>
-            <Button btnType='Danger' clicked={props.purchaseCancelled}>CANCEL</Button>
-            <Button btnType='Success' clicked={props.purchaseContinued}>CONTINUE</Button>
-        </Aux>     
-    );
+        return (
+            <React.Fragment>
+                <h3>Your Order</h3>
+                <p>A delicious burger with the following ingredients:</p> 
+                <ul>
+                    {ingredientsSummary}
+                </ul>
+                <p>Continue to checkout?</p>
+                <p><strong>Total price : {this.props.price.toFixed(2)}</strong></p>
+                <Button btnType='Danger' clicked={this.props.purchaseCancelled}>CANCEL</Button>
+                <Button btnType='Success' clicked={this.props.purchaseContinued}>CONTINUE</Button>
+            </React.Fragment>
+           
+        )
+    }
 };
 
-export default orderSummary;
+export default OrderSummary;
