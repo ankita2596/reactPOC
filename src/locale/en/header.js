@@ -12,5 +12,6 @@ export default {
   "Header.systemlinks": "System links",
   "Header.manageusers": "Manage users",
   "Header.toolslist": "Tools list",
-  "Header.webhooks": "Header Webhook"
+  "Header.webhooks": "Header Webhook",
+  "Header.testing": "Header testing"
 };

@@ -14,5 +14,6 @@ export default {
   "Footer.ourSite": "Our website",
   "Footer.docView": "Documents",
   "Footer.newsView": "News",
-  "Footer.webhooks": "Footer Webhook"
+  "Footer.webhooks": "Footer Webhook",
+  "Footer.testing": "Footer testing"
 };
