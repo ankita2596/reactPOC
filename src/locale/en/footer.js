@@ -13,5 +13,6 @@ export default {
   "Footer.rightsreserved": "All rights reserved",
   "Footer.ourSite": "Our website",
   "Footer.docView": "Documents",
-  "Footer.newsView": "News"
+  "Footer.newsView": "News",
+  "Footer.webhooks": "Footer Webhook"
 };
